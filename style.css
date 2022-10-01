@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Karla', sans-serif;
+    font-size: 62.5%;
+}
+
+:root{
+    --Cyan:hsl(179, 62%, 43%); 
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%); 
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+li, a{
+    text-decoration: none;
+    list-style: none;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Light-Gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container{
+    width: 65rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 7px 20px hsla(217.3, 21.9%, 66.9%, 0.46);
+}
+
+.community h2{
+    font-size: 2.5rem;
+}
+
+p, li, a, button, h3{
+    font-size: 1.6rem;
+}
+
+p{
+    color: var(--Grayish-Blue);
+}
+
+.subscription p, li{
+    color: var(--Light-Gray);
+}
+
+.community{
+    background-color: #fff;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 4rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.subscription h2{
+    font-size: 2rem;
+}
+
+.why-us h2{
+    font-size: 2rem;
+}
+
+b{
+    font-size: 3.5rem;
+}
+
+.subscription{
+    color: #fff;
+    background-color: var(--Cyan);
+    padding: 4rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.subscription b{
+    position: relative;
+}
+
+.subscription b::after{
+    position: relative;
+    content: " per month";
+    font-weight: 400;
+    font-size: 1.5rem;
+    top: -5px;
+    left: 5px;
+    color: var(--Light-Gray);
+}
+
+.why-us{
+    color: #fff;
+    background-color: hsl(178.8, 65.3%, 46.3%);
+    padding: 4rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.signup-btn{
+    padding: 1.5rem 9rem;
+    background-color: var(--Bright-Yellow);
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+}
+
+h3{
+    color: var(--Bright-Yellow);
+}
+
+ul, p{
+    line-height: 2.5rem;
+}
+
+/* ------ MEDIA QUERY SECTION ------ */
+
+@media (max-width:734px){
+
+    .subscription{
+        grid-column-start: 1;
+        grid-column-end: -1;
+        border-bottom-left-radius: 0;
+    }
+
+    .why-us{
+        grid-column-start: 1;
+        grid-column-end: -1;
+        border-bottom-left-radius: 1rem;
+    }
+}
